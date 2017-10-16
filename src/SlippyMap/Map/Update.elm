@@ -19,13 +19,13 @@ update : Config msg -> Msg -> State -> State
 update config msg state =
     case msg of
         ZoomIn ->
-            State.animate 400
-                (State.zoomIn config)
+            -- State.animate 400
+            (State.zoomIn config)
                 state
 
         ZoomOut ->
-            State.animate 400
-                (State.zoomOut config)
+            -- State.animate 400
+            (State.zoomOut config)
                 state
 
         ZoomInAround point ->

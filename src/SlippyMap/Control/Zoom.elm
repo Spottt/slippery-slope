@@ -60,6 +60,7 @@ render (Config { toMsg }) map =
                     )
                 , Html.Attributes.disabled (currentZoom >= maxZoom)
                 , Html.Events.onClick ZoomIn
+                , Html.Events.on "touchstart" (Decode.succeed ZoomIn)
                 ]
                 [ Svg.svg
                     [ Svg.Attributes.width "24"
@@ -82,6 +83,7 @@ render (Config { toMsg }) map =
                     )
                 , Html.Attributes.disabled (currentZoom <= minZoom)
                 , Html.Events.onClick ZoomOut
+                , Html.Events.on "touchstart" (Decode.succeed ZoomOut)
                 ]
                 [ Svg.svg
                     [ Svg.Attributes.width "24"
